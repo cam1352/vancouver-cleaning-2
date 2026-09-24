@@ -5,8 +5,9 @@ export function generateStaticParams() {
   return locationsData.map((loc) => ({ slug: loc.slug }));
 }
 
-export default function LocationPage({ params }: { params: { slug: string } }) {
-  const loc = locationsData.find(l => l.slug === params.slug);
+export default async function LocationPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const loc = locationsData.find(l => l.slug === resolvedParams.slug);
   if (!loc) return <div>Location not found</div>;
 
   return (
