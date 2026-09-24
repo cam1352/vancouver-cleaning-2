@@ -5,12 +5,50 @@ import { Calendar as CalendarIcon, ArrowRight, ArrowLeft, Home, Building2, Check
 import Link from 'next/link';
 
 export default function BookingPage() {
+  const handleSubmission = async () => {
+    setIsSubmitting(true);
+    const leadData = {
+      propertyType,
+      name,
+      businessName: propertyType === 'commercial' ? businessName : 'N/A',
+      address,
+      date,
+      time,
+      priceEstimate: propertyType === 'commercial' ? finalPriceCom : finalPriceRes,
+      details: propertyType === 'commercial' 
+        ? `${facilityType} - ${sqftCom} sqft - ${frequencyCom}` 
+        : `${bedrooms} Bed, ${bathrooms} Bath - ${sqftRes} sqft - ${frequencyRes}`
+    };
+
+    try {
+      await fetch('https://formsubmit.co/ajax/info@walkergeneralcontractors.ca', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `New ${propertyType.toUpperCase()} Cleaning Lead: ${name}`,
+          ...leadData
+        })
+      });
+    } catch (error) {
+      console.error(error);
+    }
+    
+    setIsSubmitting(false);
+    setStep(3);
+  };
   const [propertyType, setPropertyType] = useState<'residential' | 'commercial'>('commercial');
   const [step, setStep] = useState(1);
   
   // Shared
   const [date, setDate] = useState('');
   const [time, setTime] = useState('09:00 AM');
+  const [name, setName] = useState('');
+  const [businessName, setBusinessName] = useState('');
+  const [address, setAddress] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Residential State
   const [sqftRes, setSqftRes] = useState(1500);
