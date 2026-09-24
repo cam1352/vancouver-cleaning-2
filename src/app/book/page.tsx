@@ -196,17 +196,17 @@ export default function BookingPage() {
                 </div>
                 <div>
                   <label className="block font-bold text-slate-700 mb-2">Full Name</label>
-                  <input type="text" placeholder="John Doe" className="w-full border border-slate-200 rounded-xl p-3 font-medium mb-4 outline-none focus:border-blue-600" />
+                  <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="John Doe" className="w-full border border-slate-200 rounded-xl p-3 font-medium mb-4 outline-none focus:border-blue-600" />
 
                   {propertyType === 'commercial' && (
                     <>
                       <label className="block font-bold text-slate-700 mb-2">Business Name</label>
-                      <input type="text" placeholder="Acme Corp" className="w-full border border-slate-200 rounded-xl p-3 font-medium mb-4 outline-none focus:border-blue-600" />
+                      <input type="text" value={businessName} onChange={(e) => setBusinessName(e.target.value)} placeholder="Acme Corp" className="w-full border border-slate-200 rounded-xl p-3 font-medium mb-4 outline-none focus:border-blue-600" />
                     </>
                   )}
 
                   <label className="block font-bold text-slate-700 mb-2">Address</label>
-                  <input type="text" placeholder="123 Main St, Vancouver" className="w-full border border-slate-200 rounded-xl p-3 font-medium mb-6 outline-none focus:border-blue-600" />
+                  <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="123 Main St, Vancouver" className="w-full border border-slate-200 rounded-xl p-3 font-medium mb-6 outline-none focus:border-blue-600" />
                   
                   <label className="block font-bold text-slate-700 mb-4">
                     {propertyType === 'commercial' ? 'When should we do the initial walkthrough?' : 'When should we arrive?'}
@@ -223,8 +223,8 @@ export default function BookingPage() {
                     ))}
                   </div>
                 </div>
-                <button onClick={() => setStep(3)} disabled={!date} className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-blue-700 transition disabled:opacity-50">
-                  {propertyType === 'commercial' ? 'Confirm Walkthrough' : 'Continue to Checkout'} <ArrowRight className="w-5 h-5" />
+                <button onClick={handleSubmission} disabled={!date || !name || !address || isSubmitting} className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-blue-700 transition disabled:opacity-50">
+                  {isSubmitting ? 'Processing...' : propertyType === 'commercial' ? 'Confirm Walkthrough' : 'Confirm Booking'} <ArrowRight className="w-5 h-5" />
                 </button>
               </div>
             )}
