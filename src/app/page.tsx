@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Sparkles, Calendar, ArrowRight, Star, ShieldCheck, MapPin, Building, Globe } from 'lucide-react';
 import Image from 'next/image';
-import GoogleTranslate from '@/components/GoogleTranslate';
+import Header from '@/components/Header';
 import servicesData from '@/data/services.json';
 import locationsData from '@/data/locations.json';
 
@@ -9,28 +9,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#fafafa] text-[#111] font-sans selection:bg-blue-600 selection:text-white pb-32">
       {/* Floating Glass Header */}
-      <div className="fixed top-6 left-0 right-0 z-50 px-4 flex justify-center">
-        <header className="w-full max-w-5xl bg-white/70 backdrop-blur-xl border border-white/20 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-full h-16 flex items-center justify-between px-6">
-          <div className="flex items-center gap-3 font-bold tracking-tight text-lg">
-            <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white">
-              <Sparkles className="w-4 h-4" />
-            </div>
-            Vancouver Cleaning Services
-          </div>
-          <nav className="hidden md:flex gap-6 text-sm font-medium text-gray-500">
-            <Link href="#commercial" className="hover:text-black transition">Commercial</Link>
-            <Link href="#residential" className="hover:text-black transition">Residential</Link>
-            <Link href="/faq" className="hover:text-black transition">FAQ</Link>
-            <Link href="/blog" className="hover:text-black transition">Blog</Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <GoogleTranslate className="hidden sm:block" />
-            <Link href="/book" className="bg-black text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:scale-105 hover:bg-blue-600 transition-all duration-300">
-              Free Quote
-            </Link>
-          </div>
-        </header>
-      </div>
+      <Header title="Vancouver Cleaning Services" colorClass="bg-blue-600" />
 
       {/* Modern Hero Section */}
       <section className="pt-40 pb-20 px-4 flex flex-col items-center text-center">
