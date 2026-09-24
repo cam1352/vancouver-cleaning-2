@@ -15,7 +15,7 @@ export default function Home() {
             <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white">
               <Sparkles className="w-4 h-4" />
             </div>
-            Vancouver Cleaning
+            Vancouver Cleaning Services
           </div>
           <nav className="hidden md:flex gap-6 text-sm font-medium text-gray-500">
             <Link href="#commercial" className="hover:text-black transition">Commercial</Link>

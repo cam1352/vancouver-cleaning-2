@@ -195,6 +195,19 @@ export default function BookingPage() {
                   <h2 className="text-xl font-bold">2. Select a Date</h2>
                 </div>
                 <div>
+                  <label className="block font-bold text-slate-700 mb-2">Full Name</label>
+                  <input type="text" placeholder="John Doe" className="w-full border border-slate-200 rounded-xl p-3 font-medium mb-4 outline-none focus:border-blue-600" />
+
+                  {propertyType === 'commercial' && (
+                    <>
+                      <label className="block font-bold text-slate-700 mb-2">Business Name</label>
+                      <input type="text" placeholder="Acme Corp" className="w-full border border-slate-200 rounded-xl p-3 font-medium mb-4 outline-none focus:border-blue-600" />
+                    </>
+                  )}
+
+                  <label className="block font-bold text-slate-700 mb-2">Address</label>
+                  <input type="text" placeholder="123 Main St, Vancouver" className="w-full border border-slate-200 rounded-xl p-3 font-medium mb-6 outline-none focus:border-blue-600" />
+                  
                   <label className="block font-bold text-slate-700 mb-4">
                     {propertyType === 'commercial' ? 'When should we do the initial walkthrough?' : 'When should we arrive?'}
                   </label>
