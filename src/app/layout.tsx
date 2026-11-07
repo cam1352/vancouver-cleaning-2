@@ -13,16 +13,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vancouvercleaningservices — Leading Specialists & Solutions | Official",
-  description: "Looking for premier solutions from Vancouvercleaningservices? Discover proven results, certified specialists, and fast quotes. Contact us today!",
+  title: "Vancouver Cleaning Services | Janitorial & Commercial Cleaners",
+  description: "Top-rated cleaning company in Vancouver, BC. Commercial janitorial, office sanitation, move-out & residential cleaning. Transparent rates & free instant quotes.",
+  keywords: [
+    "cleaning services vancouver",
+    "cleaning company vancouver",
+    "janitorial services vancouver",
+    "cleaning services vancouver prices",
+    "cleaning services vancouver reddit",
+    "cleaning services vancouver bc",
+    "cleaning services vancouver move out",
+    "best cleaning company vancouver",
+    "commercial cleaning services vancouver bc",
+    "house cleaning services vancouver prices",
+    "maid cleaning service vancouver bc",
+    "cleaning services north vancouver prices",
+    "cleaning services in surrey bc"
+  ],
   alternates: {
     canonical: "https://vancouvercleaningservices.ca",
   },
   openGraph: {
-    title: "Vancouvercleaningservices — Leading Specialists & Solutions",
-    description: "Looking for premier solutions from Vancouvercleaningservices? Discover proven results, certified specialists, and fast quotes.",
+    title: "Vancouver Cleaning Services | Janitorial & Commercial Cleaners",
+    description: "Top-rated cleaning company in Vancouver, BC. Commercial janitorial, office sanitation, move-out & residential cleaning. Transparent rates & free instant quotes.",
     url: "https://vancouvercleaningservices.ca",
-    siteName: "Vancouvercleaningservices",
+    siteName: "Vancouver Cleaning Services",
     images: [
       {
         url: "https://vancouvercleaningservices.ca/logo.jpg",
@@ -30,7 +45,7 @@ export const metadata: Metadata = {
         height: 630,
       },
     ],
-    locale: "en_US",
+    locale: "en_CA",
     type: "website",
   },
   robots: {
@@ -43,10 +58,34 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Vancouvercleaningservices",
+    "name": "Vancouver Cleaning Services",
     "url": "https://vancouvercleaningservices.ca",
-    "description": "Looking for premier solutions from Vancouvercleaningservices? Discover proven results, certified specialists, and fast quotes. Contact us today!",
-    "image": "https://vancouvercleaningservices.ca/logo.jpg"
+    "telephone": "+1-604-555-0199",
+    "priceRange": "$$",
+    "description": "Leading commercial janitorial, strata sanitation, and residential deep cleaning specialists in Vancouver, BC. Bonded, insured, and 24/7 compliant.",
+    "image": "https://vancouvercleaningservices.ca/logo.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vancouver",
+      "addressRegion": "BC",
+      "addressCountry": "CA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 49.2827,
+      "longitude": -123.1207
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "07:00",
+        "closes": "23:00"
+      }
+    ],
+    "areaServed": [
+      "Vancouver", "North Vancouver", "West Vancouver", "Burnaby", "Richmond", "Surrey", "Coquitlam"
+    ]
   };
 
   return (

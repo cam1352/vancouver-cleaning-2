@@ -1,5 +1,25 @@
 [
   {
+    "question": "Do you offer cleaning services in North Vancouver, West Vancouver, and Surrey?",
+    "answer": "Yes! Our mobile cleaning crews serve the entire Greater Vancouver Area including Vancouver, North Vancouver, West Vancouver, Burnaby, Richmond, Coquitlam, and Surrey, BC.",
+    "id": 104
+  },
+  {
+    "question": "Why do Vancouver Reddit users recommend professional move out cleaning?",
+    "answer": "Vancouver tenants and landlords on Reddit frequently recommend professional move out cleaning to guarantee the full return of damage deposits. Our move-out service includes full interior appliance cleaning, inside cabinets, baseboards, and wall spot-checks to satisfy strict property management inspections.",
+    "id": 103
+  },
+  {
+    "question": "What are typical commercial janitorial rates in Vancouver?",
+    "answer": "Commercial janitorial contracts in Vancouver are typically billed either by square footage (.08 to .22 per sq ft) or on custom monthly recurring terms starting from /month for small offices up to custom corporate tiers for multi-story buildings.",
+    "id": 102
+  },
+  {
+    "question": "How much do cleaning services cost in Vancouver, BC (2026 rates)?",
+    "answer": "Professional cleaning services in Vancouver typically range from  to  per hour per cleaner, or flat rates between  and  depending on square footage, bedroom count, and the depth of cleaning required (standard vs deep clean).",
+    "id": 101
+  },
+  {
     "id": 1,
     "question": "Do you provide commercial cleaning in Burnaby (FAQ #1)?",
     "answer": "Yes, we offer specialized commercial cleaning for offices, restaurants, and medical facilities in Burnaby."
