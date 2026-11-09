@@ -71,15 +71,15 @@ export default function Home() {
       </section>
 
       {/* Areas We Service */}
-      <section className="py-20 px-4 bg-slate-900 text-white rounded-[3rem] max-w-7xl mx-auto my-12">
+      <section id="areas" className="py-20 px-4 bg-slate-900 text-white rounded-[3rem] max-w-7xl mx-auto my-12">
         <div className="text-center mb-16 max-w-3xl mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Areas We Service</h2>
           <p className="text-slate-400 text-lg">We cover the entire Lower Mainland, from the city centers to specific neighborhoods like Deep Cove, Lynn Valley, and Yaletown.</p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 px-8">
           {locationsData.map((loc) => (
-            <Link href={`/locations/${loc.slug}`} key={loc.id} className="text-slate-300 hover:text-white text-sm hover:underline flex items-center gap-2">
-              <MapPin className="w-3 h-3 text-blue-500" /> {loc.name}
+            <Link href={`/locations/${loc.slug}`} key={loc.id} className="text-slate-300 hover:text-emerald-400 text-sm hover:underline flex items-center gap-2 transition">
+              <MapPin className="w-3 h-3 text-emerald-500" /> {loc.name}
             </Link>
           ))}
         </div>
