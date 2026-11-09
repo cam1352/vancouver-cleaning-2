@@ -14,28 +14,24 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Vancouver Cleaning Services | Janitorial & Commercial Cleaners",
-  description: "Top-rated cleaning company in Vancouver, BC. Commercial janitorial, office sanitation, move-out & residential cleaning. Transparent rates & free instant quotes.",
+  description: "Specialized office cleaning Vancouver & restaurant cleaning Vancouver. Trusted commercial janitorial, strata & facility sanitation with fast free quotes.",
   keywords: [
+    "office cleaning vancouver",
+    "restaurant cleaning vancouver",
     "cleaning services vancouver",
     "cleaning company vancouver",
     "janitorial services vancouver",
     "cleaning services vancouver prices",
-    "cleaning services vancouver reddit",
     "cleaning services vancouver bc",
-    "cleaning services vancouver move out",
-    "best cleaning company vancouver",
     "commercial cleaning services vancouver bc",
-    "house cleaning services vancouver prices",
-    "maid cleaning service vancouver bc",
-    "cleaning services north vancouver prices",
-    "cleaning services in surrey bc"
+    "best cleaning company vancouver"
   ],
   alternates: {
     canonical: "https://vancouvercleaningservices.ca",
   },
   openGraph: {
     title: "Vancouver Cleaning Services | Janitorial & Commercial Cleaners",
-    description: "Top-rated cleaning company in Vancouver, BC. Commercial janitorial, office sanitation, move-out & residential cleaning. Transparent rates & free instant quotes.",
+    description: "Specialized office cleaning Vancouver & restaurant cleaning Vancouver. Trusted commercial janitorial, strata & facility sanitation with fast free quotes.",
     url: "https://vancouvercleaningservices.ca",
     siteName: "Vancouver Cleaning Services",
     images: [
@@ -62,7 +58,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     "url": "https://vancouvercleaningservices.ca",
     "telephone": "+1-604-555-0199",
     "priceRange": "$$",
-    "description": "Leading commercial janitorial, strata sanitation, and residential deep cleaning specialists in Vancouver, BC. Bonded, insured, and 24/7 compliant.",
+    "description": "Leading office cleaning Vancouver & restaurant cleaning Vancouver specialists. Trusted commercial janitorial, strata sanitation, and healthcare facility maintenance.",
     "image": "https://vancouvercleaningservices.ca/logo.jpg",
     "address": {
       "@type": "PostalAddress",
